@@ -16,6 +16,5 @@ HTML, CSS y JS sin dependencias en `src/`. El build (`scripts/build.mjs`) expand
 Se publica en GitHub Pages desde la rama `gh-pages` con `npm run deploy` (build + check + push de `dist/`).
 
 ## Pendiente de confirmar con el cliente
-- Que el 615 641 086 tiene WhatsApp (los botones de WhatsApp lo dan por hecho).
 - Zona y condiciones del envío a domicilio.
 - Permiso para usar las fotos de Bodas.net / Instagram y las reseñas citadas.

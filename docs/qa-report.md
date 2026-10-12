@@ -28,5 +28,4 @@ Pruebas ejecutadas con Playwright (Chromium) contra `dist/` servido en local. Ca
 
 ## No comprobado
 - Safari/iOS real y Firefox (solo Chromium).
-- Que el 615 641 086 tenga WhatsApp.
 - Lighthouse (no ejecutado).

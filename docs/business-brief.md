@@ -8,7 +8,7 @@ Investigación del 12/10/2026. Fuentes consultadas de verdad: ficha de Google Ma
 |---|---|---|
 | Nombre | Boreal · rótulo "Floristería Boreal — José Antonio Moya" | Maps (foto de fachada), Bodas.net (logo) |
 | Dirección | Av. de València, 8 · 03700 Dénia (Alicante) | Maps, ficha municipal |
-| Teléfonos | 615 641 086 (móvil) · 966 420 964 (fijo) | Maps, Instagram (bio) |
+| Teléfonos | 615 641 086 (móvil, con WhatsApp) · 966 420 964 (fijo) | Maps, Instagram (bio); WhatsApp confirmado por el cliente |
 | Email | borealfloristas@hotmail.es | Instagram, ficha municipal |
 | Instagram | @borealfloristeria · ~1.355 seguidores · 148 publicaciones | Instagram |
 | Horario | L–V 9:30–13:30 y 17:00–20:00 · S 10:00–14:00 · D cerrado | Maps (el jueves aparece "1:30", error evidente de la ficha) |
@@ -22,7 +22,7 @@ Investigación del 12/10/2026. Fuentes consultadas de verdad: ficha de Google Ma
 | Temporadas | Navidad: poinsettias y fachada decorada | Instagram |
 
 ## Probable / no verificado
-- WhatsApp en el 615 641 086 (es móvil, pero no está anunciado como WhatsApp). **Confirmar con el cliente.**
+
 - Cierre por vacaciones en agosto (una reseña lo menciona una vez).
 - Dirección anterior: Mestre Serrano, 28 (Páginas Amarillas, Bodas.net). La actual es Av. de València, 8.
 - Precio "desde 100 €" en Bodas.net: no se usa en la web (puede estar desactualizado).
