@@ -22,7 +22,7 @@ Pruebas ejecutadas con Playwright (Chromium) contra `dist/` servido en local. Ca
 - Cuaderno de bodas: desplazamiento con dedo, flechas y teclado (← →).
 
 ## Accesibilidad
-- `prefers-reduced-motion`: sin animaciones de entrada, el anochecer pasa a bloque estático con las dos frases visibles.
+- `prefers-reduced-motion`: sin animaciones de entrada, el cambio de escala pasa a bloque estático con las dos frases visibles.
 - Foco visible en enlaces, botones, chips y campos. Enlace "Saltar al contenido".
 - Áreas táctiles ≥ 40 px salvo el logotipo (30 px de alto, pero ancho).
 

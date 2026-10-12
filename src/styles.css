@@ -1,5 +1,5 @@
 /* Boreal · floristería en Dénia
-   Dirección: de día el mostrador (papel, salvia, sol), de noche las bodas (velas). Ver docs/design-direction.md */
+   Dirección: dos escalas, una firma — el mostrador (papel, salvia, sol) y las bodas (tono oscuro, velas). Ver docs/design-direction.md */
 
 @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Instrument Serif'; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
@@ -317,31 +317,35 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
   .campo-fila { grid-template-columns: 1fr 1fr; }
 }
 
-/* ================= ANOCHECER ================= */
-.anochecer { position: relative; height: 230vh; background: linear-gradient(var(--papel) 0%, var(--papel) 18%, var(--noche) 72%, var(--noche) 100%); }
-.anochecer__fijo { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; place-items: center; }
-.anochecer__fotos { position: absolute; inset: 0; }
-.anochecer__fotos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.anochecer__dia { opacity: calc(1 - var(--p, 0) * 1.6); filter: saturate(calc(1 - var(--p, 0) * .6)); }
-.anochecer__noche { opacity: calc((var(--p, 0) - .35) * 1.8); }
-.anochecer__fijo::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(18, 22, 17, .5), rgba(18, 22, 17, .18)), rgba(18, 22, 17, calc(.1 + var(--p, 0) * .4)); }
-.anochecer__frase { position: relative; z-index: 1; margin: 0; padding: 0 var(--g); text-align: center; color: #fff; font: 400 clamp(2.4rem, 8.5vw, 7.4rem)/.95 var(--serif); letter-spacing: -.01em; text-wrap: balance; text-shadow: 0 2px 30px rgba(0,0,0,.25); display: grid; }
-.anochecer__frase > span { grid-area: 1 / 1; transition: opacity .8s var(--ease), transform .8s var(--ease); }
-.anochecer__a { opacity: 1; }
-.anochecer__b { opacity: 0; transform: translateY(.3em); }
-.is-tarde .anochecer__a { opacity: 0; transform: translateY(-.3em); }
-.is-tarde .anochecer__b { opacity: 1; transform: none; }
-.anochecer__b em { color: var(--vela); }
-.anochecer__hora { position: absolute; z-index: 1; bottom: 28px; left: 50%; transform: translateX(-50%); margin: 0; font: .78rem/1 var(--mono); letter-spacing: .1em; color: rgba(255,255,255,.8); }
-.anochecer__hora::before { content: '◐ '; }
+/* ================= CAMBIO DE ESCALA ================= */
+.cambio { position: relative; height: 230vh; background: linear-gradient(var(--papel) 0%, var(--papel) 18%, var(--noche) 72%, var(--noche) 100%); }
+.cambio__fijo { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; place-items: center; }
+.cambio__fotos { position: absolute; inset: 0; }
+.cambio__fotos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cambio__ramo { opacity: calc(1 - var(--p, 0) * 1.6); filter: saturate(calc(1 - var(--p, 0) * .6)); }
+.cambio__boda { opacity: calc((var(--p, 0) - .35) * 1.8); }
+.cambio__fijo::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(18, 22, 17, .5), rgba(18, 22, 17, .18)), rgba(18, 22, 17, calc(.1 + var(--p, 0) * .4)); }
+.cambio__frase { position: relative; z-index: 1; margin: 0; padding: 0 var(--g); text-align: center; color: #fff; font: 400 clamp(2.4rem, 8.5vw, 7.4rem)/.95 var(--serif); letter-spacing: -.01em; text-wrap: balance; text-shadow: 0 2px 30px rgba(0,0,0,.25); display: grid; }
+.cambio__frase > span { grid-area: 1 / 1; transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.cambio__a { opacity: 1; }
+.cambio__b { opacity: 0; transform: translateY(.3em); }
+.is-boda .cambio__a { opacity: 0; transform: translateY(-.3em); }
+.is-boda .cambio__b { opacity: 1; transform: none; }
+.cambio__b em { color: var(--vela); }
+.cambio__etiqueta { position: absolute; z-index: 1; bottom: 30px; left: 50%; transform: translateX(-50%); margin: 0; display: flex; align-items: center; gap: 12px; white-space: nowrap; font: .75rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.cambio__linea { position: relative; width: 72px; height: 1px; background: rgba(255,255,255,.3); }
+.cambio__linea::after { content: ''; position: absolute; top: -3px; left: calc(var(--p, 0) * 100% - 3px); width: 7px; height: 7px; border-radius: 50%; background: #fff; }
+.cambio__e-a, .cambio__e-b { transition: color .6s var(--ease); }
+.cambio:not(.is-boda) .cambio__e-a, .is-boda .cambio__e-b { color: #fff; }
+.is-boda .cambio__e-b { color: var(--vela); }
 /* Sin JS o sin movimiento: transición estática y ambas frases visibles */
-.no-anim .anochecer, html:not(.js) .anochecer { height: auto; }
-.no-anim .anochecer__fijo, html:not(.js) .anochecer__fijo { position: relative; height: 80svh; }
-.no-anim .anochecer__frase > span, html:not(.js) .anochecer__frase > span { grid-area: auto; opacity: 1; transform: none; }
-.no-anim .anochecer__dia, html:not(.js) .anochecer__dia { opacity: 0; }
-.no-anim .anochecer__noche, html:not(.js) .anochecer__noche { opacity: 1; }
+.no-anim .cambio, html:not(.js) .cambio { height: auto; }
+.no-anim .cambio__fijo, html:not(.js) .cambio__fijo { position: relative; height: 80svh; }
+.no-anim .cambio__frase > span, html:not(.js) .cambio__frase > span { grid-area: auto; opacity: 1; transform: none; }
+.no-anim .cambio__ramo, html:not(.js) .cambio__ramo { opacity: 0; }
+.no-anim .cambio__boda, html:not(.js) .cambio__boda { opacity: 1; }
 
-/* ================= BODAS (noche) ================= */
+/* ================= BODAS (tono oscuro) ================= */
 .bodas { background: var(--noche); color: var(--crema-noche); padding: 40px 0 0; }
 .bodas .kicker { color: var(--vela); }
 .bodas__cab { padding: 40px var(--g) 48px; max-width: var(--max); margin: 0 auto; }
@@ -443,8 +447,8 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
   .mini-form label:nth-child(2) { grid-column: auto; }
 }
 
-/* ================= AMANECER + VISITA ================= */
-.amanecer { height: 34vh; background: linear-gradient(var(--noche), var(--salvia-osc) 55%, var(--papel)); }
+/* ================= VUELTA + VISITA ================= */
+.vuelta { height: 34vh; background: linear-gradient(var(--noche), var(--salvia-osc) 55%, var(--papel)); }
 .visita { display: grid; gap: 34px; padding: 40px var(--g) 90px; max-width: var(--max); margin: 0 auto; }
 .visita__cab .titulo-1 em { color: var(--salvia-osc); }
 .visita__cab .l--der { padding-left: .8em; }
@@ -508,3 +512,6 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 @media (min-width: 1440px) {
   .top, .pie { padding-inline: calc((100% - var(--max)) / 2 + var(--g)); }
 }
+@media (max-width: 899px) { .cambio__etiqueta { bottom: calc(var(--barra) + 22px + env(safe-area-inset-bottom)); } }
+.no-anim .cambio__etiqueta, html:not(.js) .cambio__etiqueta { display: none; }
+.no-anim .cambio__frase, html:not(.js) .cambio__frase { gap: .35em; }

@@ -74,11 +74,10 @@
     $$('.reveal').forEach((el) => el.classList.add('is-visto'));
   }
 
-  /* ---------- Scroll: cabecera, anochecer, modo noche ---------- */
+  /* ---------- Scroll: cabecera, cambio, modo noche ---------- */
   const top = $('[data-top]');
-  const anochecer = $('[data-anochecer]');
+  const cambio = $('[data-cambio]');
   const bodas = $('#bodas');
-  const hora = $('[data-hora]');
   let pendiente = false;
 
   function alScroll() {
@@ -88,16 +87,15 @@
     top.classList.toggle('is-solida', y > 24);
 
     let p = 0;
-    if (anochecer && !sinMovimiento) {
-      const r = anochecer.getBoundingClientRect();
+    if (cambio && !sinMovimiento) {
+      const r = cambio.getBoundingClientRect();
       p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - vh)));
-      anochecer.style.setProperty('--p', p.toFixed(3));
-      anochecer.classList.toggle('is-tarde', p > 0.48);
-      if (hora) { const m = Math.round(810 + p * 480); hora.textContent = hhmm(m - (m % 5)); } // 13:30 → 21:30
+      cambio.style.setProperty('--p', p.toFixed(3));
+      cambio.classList.toggle('is-boda', p > 0.48);
     }
     // La cabecera pasa a modo noche sobre la zona oscura
     const rb = bodas.getBoundingClientRect();
-    const ra = anochecer.getBoundingClientRect();
+    const ra = cambio.getBoundingClientRect();
     const noche = (rb.top <= 40 && rb.bottom > 40) || (ra.top <= 0 && ra.bottom > 40 && (sinMovimiento || p > 0.55));
     top.classList.toggle('is-noche', noche);
     html.classList.toggle('is-noche-ui', noche);

@@ -34,8 +34,8 @@ Todas marcadas como «Ambiente» en la web. Ninguna se presenta como trabajo, lo
 | `ramo-kraft` | Encargos 01 | Anton Sidarau | https://unsplash.com/photos/VEt9cLO6Pdo |
 | `manos-tulipanes` | Encargos 04 | SarahCreates | https://unsplash.com/photos/ZOicldC8tv0 |
 | `jarron-sol` | Tarjeta | Renata Kurtveliieva-Berezhna | https://unsplash.com/photos/FBN1LgnvaxQ |
-| `buganvilla-muro` | Anochecer (día) | Ola Noland | https://unsplash.com/photos/By-ReZ9uYMA |
-| `ramo-oscuro` | Anochecer (noche) | an.nemopo | https://unsplash.com/photos/3E74UmMK0Tc |
+| `buganvilla-muro` | Cambio de escala (tienda) | Ola Noland | https://unsplash.com/photos/By-ReZ9uYMA |
+| `ramo-oscuro` | Cambio de escala (bodas) | an.nemopo | https://unsplash.com/photos/3E74UmMK0Tc |
 | `mesa-velas` | Bodas, panorámica | M F | https://unsplash.com/photos/fb0_wj2MZk4 |
 | `ramo-novia` | Bodas, servicios | nikki gibson | https://unsplash.com/photos/UQl_-yabQiA |
 | `banquete-palmeras` | Bodas, presupuesto | Vidit Goswami | https://unsplash.com/photos/nBq1rdToEXY |

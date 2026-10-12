@@ -1,7 +1,7 @@
 # Boreal · Floristería en Dénia — demo web
 
 Propuesta de web para Boreal, la floristería de José Antonio Moya en la Av. de València 8, Dénia.
-Concepto: *Ramos para hoy, bodas para siempre* — la web empieza de día (la tienda) y anochece al entrar en bodas. Ver `docs/`.
+Concepto: *Ramos para hoy, bodas para siempre* — la web pasa del tono claro de la tienda (un ramo) al tono oscuro de las bodas (la boda entera). Ver `docs/`.
 
 ## Uso
 
