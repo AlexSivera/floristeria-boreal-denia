@@ -1,0 +1,173 @@
+{
+  "hero-ranunculo": {
+    "ratio": 0.7142857142857143,
+    "widths": [
+      480,
+      760,
+      1100,
+      1500
+    ]
+  },
+  "jarron-sol": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "buganvilla-muro": {
+    "ratio": 1.7777777777777777,
+    "widths": [
+      800,
+      1400,
+      2000
+    ]
+  },
+  "ramo-kraft": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "manos-tulipanes": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "ramo-oscuro": {
+    "ratio": 1.5,
+    "widths": [
+      800,
+      1400,
+      2000
+    ]
+  },
+  "mesa-velas": {
+    "ratio": 1.5,
+    "widths": [
+      800,
+      1400,
+      2000
+    ]
+  },
+  "banquete-palmeras": {
+    "ratio": 0.8,
+    "widths": [
+      600,
+      1000,
+      1500
+    ]
+  },
+  "ramo-novia": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "rotulo": {
+    "ratio": 1.2,
+    "widths": [
+      480,
+      730
+    ]
+  },
+  "fachada": {
+    "ratio": 0.75,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "interior": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      720
+    ]
+  },
+  "centro-tienda": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "navidad-interior": {
+    "ratio": 0.8,
+    "widths": [
+      480
+    ]
+  },
+  "boda-pasillo": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800,
+      1000
+    ]
+  },
+  "boda-centro-montgo": {
+    "ratio": 1.3333333333333333,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "boda-arco-puerto": {
+    "ratio": 1.3333333333333333,
+    "widths": [
+      480,
+      800,
+      1200
+    ]
+  },
+  "boda-peonias": {
+    "ratio": 1,
+    "widths": [
+      480,
+      800,
+      1100
+    ]
+  },
+  "boda-arco-mar": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "boda-noche": {
+    "ratio": 1.3333333333333333,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "boda-velas": {
+    "ratio": 1.3333333333333333,
+    "widths": [
+      480,
+      800
+    ]
+  },
+  "boda-playa-ig": {
+    "ratio": 0.5625,
+    "widths": [
+      360
+    ]
+  },
+  "boda-boho": {
+    "ratio": 0.8,
+    "widths": [
+      480,
+      800
+    ]
+  }
+}
