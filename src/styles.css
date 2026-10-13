@@ -242,25 +242,27 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 .fichas div { display: grid; grid-template-columns: 7.5rem 1fr; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--linea); }
 .fichas dt { font: .75rem/1.6 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--tinta-2); }
 .fichas dd { margin: 0; }
-.tienda__interior { margin: 0; width: 62%; justify-self: end; }
-.tienda__interior img { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+.tienda__fachada { position: relative; z-index: 1; }
+.tienda__interior { position: relative; z-index: 2; margin: -34% 0 0; width: 50%; justify-self: end; }
+.tienda__interior img { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; border: 7px solid #FBF8F1; box-shadow: 0 24px 40px -22px rgba(40, 30, 10, .55); transform: rotate(2deg); }
+.tienda__interior .etiqueta { padding-left: 7px; }
 @media (min-width: 900px) {
-  .tienda { grid-template-columns: 5fr 1fr 6fr; grid-template-rows: auto auto; column-gap: 0; padding-top: 130px; padding-bottom: 130px; }
-  .tienda__fachada { grid-column: 1; grid-row: 1 / span 2; }
-  .tienda__texto { grid-column: 3; grid-row: 1; padding-top: 6vh; }
-  .tienda__interior { grid-column: 3; grid-row: 2; width: 46%; justify-self: start; margin-top: 40px; }
+  .tienda { grid-template-columns: 5fr 1fr 6fr; grid-template-rows: auto auto; column-gap: 0; row-gap: 0; padding-top: 120px; padding-bottom: 120px; align-items: center; }
+  .tienda__fachada { grid-column: 1; grid-row: 1; width: 88%; }
+  .tienda__texto { grid-column: 3; grid-row: 1 / 3; }
+  .tienda__interior { grid-column: 1; grid-row: 2; width: 44%; margin: -36% 0 0; }
 }
 
 /* ================= ENCARGOS ================= */
-.encargos { position: relative; padding: 56px var(--g) 80px; max-width: var(--max); margin: 0 auto; }
+.encargos { position: relative; padding: 56px var(--g) 64px; max-width: var(--max); margin: 0 auto; }
 .seccion-cab { margin-bottom: 30px; }
 .indice { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--tinta); }
 .indice__item {
-  display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) 92px; grid-template-areas: 'num tit foto' 'num txt foto'; column-gap: 14px;
-  padding: 20px 0; border-bottom: 1px solid var(--linea);
+  display: grid; grid-template-columns: 2.4rem minmax(0, 1fr) 84px; grid-template-areas: 'num tit foto' 'num txt foto'; column-gap: 14px;
+  padding: 16px 0; border-bottom: 1px solid var(--linea);
 }
 .indice__num { grid-area: num; font: .78rem/2.6 var(--mono); color: var(--tinta-2); }
-.indice__titulo { grid-area: tit; font: 400 clamp(2.1rem, 8vw, 5.2rem)/1 var(--serif); letter-spacing: -.01em; transition: transform .5s var(--ease), color .3s; }
+.indice__titulo { grid-area: tit; font: 400 clamp(2rem, 7vw, 3.6rem)/1 var(--serif); letter-spacing: -.01em; transition: transform .5s var(--ease), color .3s; }
 .indice__titulo em { font-style: italic; }
 .indice__txt { grid-area: txt; margin: 8px 0 0; color: var(--tinta-2); font-size: .97rem; max-width: 52ch; }
 .indice__foto { grid-area: foto; margin: 0; align-self: center; }
@@ -268,7 +270,11 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 .indice__foto figcaption { margin-top: 6px; text-align: center; font: .66rem/1 var(--mono); letter-spacing: .04em; color: var(--tinta-2); }
 .indice__foto .es-real::before { content: '● '; color: var(--buganvilla); }
 @media (min-width: 900px) {
-  .indice__item { grid-template-columns: 5rem minmax(0, 1fr) minmax(0, 1fr) 150px; grid-template-areas: 'num tit txt foto'; align-items: center; column-gap: 28px; padding: 22px 0; }
+  .indice { display: grid; grid-template-columns: 1fr 1fr; column-gap: 5vw; border-top: 0; }
+  .indice__item { grid-template-columns: 3rem minmax(0, 1fr) 112px; grid-template-areas: 'num tit foto' 'num txt foto'; align-items: center; column-gap: 22px; padding: 18px 0; border-top: 1px solid var(--linea); border-bottom: 0; }
+  .indice__item:nth-child(-n+2) { border-top-color: var(--tinta); }
+  .indice__item:last-child { grid-column: 1 / -1; }
+  .indice__item:last-child .indice__txt { max-width: 60ch; }
   .indice__txt { margin: 0; }
   .indice__item:hover .indice__titulo { transform: translateX(12px); color: var(--buganvilla); }
   .indice__item:hover .indice__foto img { transform: scale(1.04); }
@@ -331,7 +337,7 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 }
 
 /* ================= CAMBIO DE ESCALA ================= */
-.cambio { position: relative; height: 230vh; background: linear-gradient(var(--papel) 0%, var(--papel) 18%, var(--noche) 72%, var(--noche) 100%); }
+.cambio { position: relative; height: 175vh; background: linear-gradient(var(--papel) 0%, var(--papel) 18%, var(--noche) 72%, var(--noche) 100%); }
 .cambio__fijo { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; place-items: center; }
 .cambio__fotos { position: absolute; inset: 0; }
 .cambio__fotos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -366,16 +372,20 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 .bodas__cab .l--der { padding-left: 1.1em; }
 @media (min-width: 900px) { .bodas__cab .titulo-1 { font-size: min(7vw, 15vh, 6.3rem); } .bodas__cab .titulo-1 .l { white-space: nowrap; } }
 .bodas__lead { max-width: 44ch; margin: 28px 0 0; color: rgba(237, 230, 216, .78); font-size: 1.08rem; }
+.bodas__foto { margin: 34px 0 0 auto; width: 78%; }
+.bodas__foto .arco { aspect-ratio: 4 / 5; background: var(--noche-2); }
 .bodas__panoramica { margin: 0 auto; max-width: var(--max); padding: 0 var(--g); }
 .bodas__panoramica img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 @media (min-width: 640px) { .bodas__panoramica img { aspect-ratio: 16 / 8; } }
 @media (min-width: 900px) {
-  .bodas__cab { display: grid; grid-template-columns: 1.5fr 1fr; align-items: end; column-gap: 5vw; padding-top: 90px; padding-bottom: 80px; }
-  .bodas__cab .kicker { grid-column: 1 / -1; }
-  .bodas__lead { margin: 0 0 1.2em; }
+  .bodas__cab { display: grid; grid-template-columns: 1.5fr 1fr; grid-template-rows: auto auto 1fr; column-gap: 5vw; padding-top: 90px; padding-bottom: 40px; }
+  .bodas__cab .kicker { grid-column: 1; grid-row: 1; }
+  .bodas__cab .titulo-1 { grid-column: 1; grid-row: 2; }
+  .bodas__lead { grid-column: 1; grid-row: 3; margin: 36px 0 0; align-self: start; }
+  .bodas__foto { grid-column: 2; grid-row: 1 / 4; margin: 0; width: 100%; max-width: 420px; justify-self: end; }
 }
 
-.servicios { display: grid; gap: 28px; padding: 72px var(--g); max-width: var(--max); margin: 0 auto; }
+.servicios { display: grid; gap: 28px; padding: 56px var(--g); max-width: var(--max); margin: 0 auto; }
 .servicios__titulo { font: .75rem/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--vela); }
 .servicios__lista { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(237, 230, 216, .2); }
 .servicios__lista li { display: grid; grid-template-columns: 2.6rem 1fr; padding: 15px 0; border-bottom: 1px solid rgba(237, 230, 216, .14); font: 400 clamp(1.45rem, 4.6vw, 2.15rem)/1.12 var(--serif); }
@@ -383,7 +393,7 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 .servicios__foto { margin: 0; width: 72%; justify-self: end; }
 .servicios__foto .arco { aspect-ratio: 4 / 5; background: var(--noche-2); }
 @media (min-width: 900px) {
-  .servicios { grid-template-columns: 1fr 1.5fr 1fr; column-gap: 4vw; align-items: start; padding-top: 110px; padding-bottom: 110px; }
+  .servicios { grid-template-columns: 1fr 1.5fr 1fr; column-gap: 4vw; align-items: start; padding-top: 70px; padding-bottom: 90px; }
   .servicios__titulo { padding-top: 18px; }
   .servicios__foto { width: 100%; margin-top: 60px; }
 }
@@ -469,8 +479,9 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 }
 
 /* ================= VUELTA + VISITA ================= */
-.vuelta { height: 34vh; background: linear-gradient(var(--noche), var(--salvia-osc) 55%, var(--papel)); }
+.vuelta { height: 120px; background: linear-gradient(var(--noche), var(--salvia-osc) 55%, var(--papel)); }
 .visita { display: grid; gap: 34px; padding: 40px var(--g) 90px; max-width: var(--max); margin: 0 auto; }
+.visita__cab .titulo-1 { font-size: clamp(2.6rem, 9vw, 6.2rem); }
 .visita__cab .titulo-1 em { color: var(--salvia-osc); }
 .visita__cab .l--der { padding-left: .8em; }
 .visita__foto { margin: 0; }
@@ -504,17 +515,23 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 }
 
 /* ================= PIE ================= */
-.pie { background: var(--salvia-osc); color: var(--papel); padding: 40px var(--g) 30px; overflow: hidden; }
-.pie { position: relative; }
-.pie__logo { margin: 0 0 22px; width: clamp(96px, 16vw, 140px); }
-.pie__logo img { width: 100%; height: auto; border-radius: 3px; box-shadow: 0 10px 30px -12px rgba(0,0,0,.4); }
-@media (min-width: 900px) { .pie__logo { position: absolute; right: calc(max(var(--g), (100% - var(--max)) / 2 + var(--g))); top: 48px; margin: 0; } }
-.pie__marca { margin: 0 0 20px; font: 400 clamp(6rem, 33vw, 30rem)/.78 var(--serif); letter-spacing: -.03em; }
-.pie__fila { display: grid; gap: 8px; font-size: .92rem; border-top: 1px solid rgba(242, 236, 225, .3); padding-top: 18px; }
-.pie__fila p { margin: 0; }
-.pie__fila a { text-underline-offset: 4px; }
-.pie__demo { margin: 22px 0 0; font: .7rem/1.5 var(--mono); opacity: .7; max-width: 70ch; }
-@media (min-width: 900px) { .pie__fila { grid-template-columns: 1fr auto; } }
+.pie { position: relative; background: var(--salvia-osc); color: var(--papel); padding: 48px var(--g) 28px; overflow: hidden; }
+.pie a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.pie a:hover { color: #F1D6A4; }
+.pie__arriba { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 24px; padding-bottom: 36px; border-bottom: 1px solid rgba(242, 236, 225, .25); }
+.pie__logo { grid-column: 1 / -1; margin: 0; width: 120px; }
+.pie__logo img { width: 100%; height: auto; border-radius: 3px; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .45); transform: rotate(-2deg); }
+.pie__col:first-of-type { grid-column: 1 / -1; }
+@media (min-width: 900px) { .pie__col:first-of-type { grid-column: auto; } }
+.pie__col p { margin: 0 0 12px; font-size: .95rem; line-height: 1.7; }
+.pie__col a { display: inline-block; padding: 2px 0; }
+.pie__h { font: .72rem/1 var(--mono) !important; letter-spacing: .08em; text-transform: uppercase; opacity: .7; margin-bottom: 12px !important; }
+.pie__marca { margin: 26px 0 8px; font: 400 clamp(6rem, 31vw, 27rem)/.78 var(--serif); letter-spacing: -.03em; }
+.pie__demo { margin: 18px 0 0; font: .7rem/1.5 var(--mono); opacity: .7; max-width: 70ch; }
+@media (min-width: 900px) {
+  .pie__arriba { grid-template-columns: auto 1fr 1fr 1fr; column-gap: 6vw; align-items: start; }
+  .pie__logo { grid-column: auto; width: 150px; }
+}
 
 /* ================= BARRA MÓVIL ================= */
 .barra {
@@ -537,7 +554,6 @@ h1, h2, h3 { font-weight: 400; margin: 0; hyphens: none; }
 
 /* Ajustes finales */
 .dedicatoria__pie span { white-space: nowrap; }
-.pie__fila a { display: inline-block; padding: 12px 0; }
 @media (min-width: 1440px) {
   .top, .pie { padding-inline: calc((100% - var(--max)) / 2 + var(--g)); }
 }

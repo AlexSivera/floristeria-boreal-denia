@@ -37,7 +37,6 @@ Todas están marcadas como «Ambiente» en la web. Ninguna se presenta como trab
 | `jarron-sol` | Tarjeta | Renata Kurtveliieva-Berezhna | https://unsplash.com/photos/FBN1LgnvaxQ |
 | `buganvilla-muro` | Cambio de escala (tienda) | Ola Noland | https://unsplash.com/photos/By-ReZ9uYMA |
 | `ramo-oscuro` | Cambio de escala (bodas) | an.nemopo | https://unsplash.com/photos/3E74UmMK0Tc |
-| `mesa-velas` | Bodas, panorámica | M F | https://unsplash.com/photos/fb0_wj2MZk4 |
 | `banquete-palmeras` | Bodas, presupuesto | Vidit Goswami | https://unsplash.com/photos/nBq1rdToEXY |
 
 ## Brief fotográfico si Boreal compra la web
@@ -49,5 +48,5 @@ Una jornada de sesión cubre casi todo. Luz natural, tonos cálidos y sombras de
 3. **Manos atando un ramo** con papel kraft y cuerda, plano cerrado. Sustituye a `ramo-kraft` y `manos-tulipanes`.
 4. **Interior** a primera hora, con las plantas ordenadas y la luz entrando.
 5. **Tres ramos firmados** (un «detalle», un «mediano» y un «generoso») sobre la misma pared, para ilustrar los tamaños de la tarjeta.
-6. **Bodas**: pedir a 2 o 3 parejas recientes las fotos de su fotógrafo, con permiso y crédito. Prioridad: ceremonia, ramo de novia y mesa de banquete. Sustituye a `mesa-velas` y `banquete-palmeras` y sube la resolución del cuaderno (las fotos de Facebook son de 720 px).
+6. **Bodas**: pedir a 2 o 3 parejas recientes las fotos de su fotógrafo, con permiso y crédito. Prioridad: ceremonia, ramo de novia y mesa de banquete. Sustituye a `banquete-palmeras` y sube la resolución del cuaderno (las fotos de Facebook son de 720 px).
 7. **Navidad**: la fachada vestida, en horizontal.

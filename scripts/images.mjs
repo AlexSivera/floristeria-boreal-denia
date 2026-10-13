@@ -15,7 +15,6 @@ const FOTOS = {
   'ramo-kraft':       { src: 'stock/ramo-kraft.jpg', ratio: 4 / 5, foco: [0.62, 0.5], grade: 'day', sizes: [320, 640] },
   'manos-tulipanes':  { src: 'stock/manos-tulipanes.jpg', ratio: 4 / 5, foco: [0.55, 0.5], grade: 'day', sizes: [320, 640] },
   'ramo-oscuro':      { src: 'stock/ramo-oscuro.jpg', ratio: 3 / 2, foco: [0.5, 0.5], grade: 'night', sizes: [800, 1400, 2000] },
-  'mesa-velas':       { src: 'stock/mesa-velas.jpg', ratio: 3 / 2, foco: [0.5, 0.5], grade: 'night', sizes: [800, 1400, 2000] },
   'banquete-palmeras':{ src: 'stock/banquete-palmeras.jpg', ratio: 4 / 5, foco: [0.5, 0.6], grade: 'night', sizes: [600, 1000, 1500] },
 
   // — Fotos reales de Boreal (Google Maps, Bodas.net, Instagram, Facebook) —
