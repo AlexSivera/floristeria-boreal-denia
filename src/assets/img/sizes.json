@@ -1,13 +1,4 @@
 {
-  "hero-ranunculo": {
-    "ratio": 0.7142857142857143,
-    "widths": [
-      480,
-      760,
-      1100,
-      1500
-    ]
-  },
   "jarron-sol": {
     "ratio": 0.8,
     "widths": [
@@ -27,15 +18,15 @@
   "ramo-kraft": {
     "ratio": 0.8,
     "widths": [
-      480,
-      800
+      320,
+      640
     ]
   },
   "manos-tulipanes": {
     "ratio": 0.8,
     "widths": [
-      480,
-      800
+      320,
+      640
     ]
   },
   "ramo-oscuro": {
@@ -62,78 +53,107 @@
       1500
     ]
   },
-  "ramo-novia": {
-    "ratio": 0.8,
-    "widths": [
-      480,
-      800,
-      1200
-    ]
-  },
-  "rotulo": {
-    "ratio": 1.2,
-    "widths": [
-      480,
-      730
-    ]
-  },
   "fachada": {
     "ratio": 0.75,
     "widths": [
-      480,
-      800,
-      1200
+      600,
+      900,
+      1200,
+      1500
+    ]
+  },
+  "rotulo": {
+    "ratio": 1.7763157894736843,
+    "widths": [
+      540,
+      1080
+    ]
+  },
+  "logo": {
+    "ratio": 1,
+    "widths": [
+      360,
+      741
+    ]
+  },
+  "manos-taller": {
+    "ratio": 0.8,
+    "widths": [
+      576
     ]
   },
   "interior": {
     "ratio": 0.8,
     "widths": [
-      480,
-      720
+      320,
+      640,
+      1000
     ]
   },
   "centro-tienda": {
     "ratio": 0.8,
     "widths": [
-      480,
-      800
+      320,
+      640
     ]
   },
   "navidad-interior": {
     "ratio": 0.8,
     "widths": [
+      320,
       480
+    ]
+  },
+  "boda-acantilado": {
+    "ratio": 0.8,
+    "widths": [
+      576
+    ]
+  },
+  "boda-acantilado-mesa": {
+    "ratio": 0.8,
+    "widths": [
+      576
+    ]
+  },
+  "boda-acantilado-sillas": {
+    "ratio": 0.8,
+    "widths": [
+      576
+    ]
+  },
+  "boda-acantilado-flor": {
+    "ratio": 0.8,
+    "widths": [
+      576
     ]
   },
   "boda-pasillo": {
     "ratio": 0.8,
     "widths": [
       480,
-      800,
-      1000
+      800
     ]
   },
-  "boda-centro-montgo": {
-    "ratio": 1.3333333333333333,
+  "boda-peonias": {
+    "ratio": 0.8,
     "widths": [
       480,
       800
     ]
   },
   "boda-arco-puerto": {
-    "ratio": 1.3333333333333333,
+    "ratio": 0.8,
     "widths": [
       480,
-      800,
-      1200
+      800
     ]
   },
-  "boda-peonias": {
-    "ratio": 1,
+  "boda-centro": {
+    "ratio": 0.8,
     "widths": [
       480,
-      800,
-      1100
+      680
     ]
   },
   "boda-arco-mar": {
@@ -143,24 +163,11 @@
       800
     ]
   },
-  "boda-noche": {
-    "ratio": 1.3333333333333333,
-    "widths": [
-      480,
-      800
-    ]
-  },
   "boda-velas": {
-    "ratio": 1.3333333333333333,
+    "ratio": 0.8,
     "widths": [
       480,
-      800
-    ]
-  },
-  "boda-playa-ig": {
-    "ratio": 0.5625,
-    "widths": [
-      360
+      680
     ]
   },
   "boda-boho": {

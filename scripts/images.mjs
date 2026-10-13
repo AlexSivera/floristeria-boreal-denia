@@ -10,35 +10,38 @@ const OUT = 'src/assets/img';
 // grade: day (luz mediterránea cálida) · night (velas) · real (fotos del negocio, unificadas)
 const FOTOS = {
   // — Stock provisional (Unsplash) —
-  'hero-ranunculo':   { src: 'stock/hero-ranunculo.jpg', ratio: 4 / 5.6, foco: [0.55, 0.42], grade: 'day', sizes: [480, 760, 1100, 1500] },
   'jarron-sol':       { src: 'stock/jarron-sol.jpg', ratio: 4 / 5, foco: [0.5, 0.5], grade: 'day', sizes: [480, 800, 1200] },
   'buganvilla-muro':  { src: 'stock/buganvilla-muro.jpg', ratio: 16 / 9, foco: [0.5, 0.5], grade: 'day', sizes: [800, 1400, 2000] },
-  'ramo-kraft':       { src: 'stock/ramo-kraft.jpg', ratio: 4 / 5, foco: [0.62, 0.5], grade: 'day', sizes: [480, 800] },
-  'manos-tulipanes':  { src: 'stock/manos-tulipanes.jpg', ratio: 4 / 5, foco: [0.55, 0.5], grade: 'day', sizes: [480, 800] },
+  'ramo-kraft':       { src: 'stock/ramo-kraft.jpg', ratio: 4 / 5, foco: [0.62, 0.5], grade: 'day', sizes: [320, 640] },
+  'manos-tulipanes':  { src: 'stock/manos-tulipanes.jpg', ratio: 4 / 5, foco: [0.55, 0.5], grade: 'day', sizes: [320, 640] },
   'ramo-oscuro':      { src: 'stock/ramo-oscuro.jpg', ratio: 3 / 2, foco: [0.5, 0.5], grade: 'night', sizes: [800, 1400, 2000] },
   'mesa-velas':       { src: 'stock/mesa-velas.jpg', ratio: 3 / 2, foco: [0.5, 0.5], grade: 'night', sizes: [800, 1400, 2000] },
   'banquete-palmeras':{ src: 'stock/banquete-palmeras.jpg', ratio: 4 / 5, foco: [0.5, 0.6], grade: 'night', sizes: [600, 1000, 1500] },
-  'ramo-novia':       { src: 'stock/ramo-novia.jpg', ratio: 4 / 5, foco: [0.5, 0.55], grade: 'night', sizes: [480, 800, 1200] },
 
-  // — Fotos reales de Boreal (Google Maps, Bodas.net, Instagram) —
-  'rotulo':           { src: 'real/maps-rotulo.png', ratio: 1.2, foco: [0.56, 0.5], grade: 'real', sizes: [480, 730] },
-  'fachada':          { src: 'real/maps-fachada.jpg', ratio: 3 / 4, foco: [0.5, 0.5], grade: 'real', sizes: [480, 800, 1200] },
-  'interior':         { src: 'real/maps-interior.jpg', ratio: 4 / 5, foco: [0.78, 0.5], grade: 'real', sizes: [480, 720] },
-  'centro-tienda':    { src: 'real/maps-centro.jpg', ratio: 4 / 5, foco: [0.5, 0.55], grade: 'real', sizes: [480, 800] },
-  'navidad-interior': { src: 'real/ig-navidad-interior.jpg', ratio: 4 / 5, foco: [0.5, 0.5], grade: 'real', sizes: [480] },
-  'boda-pasillo':     { src: 'real/bodas-aisle2.png', ratio: 4 / 5, foco: [0.42, 0.5], grade: 'real', sizes: [480, 800, 1000] },
-  'boda-centro-montgo':{ src: 'real/bodas-centerpiece.png', ratio: 4 / 3, foco: [0.5, 0.5], grade: 'real', sizes: [480, 800, 1200] },
-  'boda-arco-puerto': { src: 'real/bodas-archport1.png', ratio: 4 / 3, foco: [0.5, 0.5], grade: 'real', sizes: [480, 800, 1200] },
-  'boda-peonias':     { src: 'real/bodas-peonies.png', ratio: 1, foco: [0.42, 0.55], grade: 'real', sizes: [480, 800, 1100] },
+  // — Fotos reales de Boreal (Google Maps, Bodas.net, Instagram, Facebook) —
+  'fachada':          { src: 'real/maps-fachada-hd.jpg', ratio: 3 / 4, foco: [0.5, 0.5], grade: 'real', sizes: [600, 900, 1200, 1500], q: 62 },
+  'rotulo':           { src: 'real/maps-rotulo.png', ratio: 1080 / 608, foco: [0.5, 0.5], grade: 'real', sizes: [540, 1080] },
+  'logo':             { src: 'real/fb-logo.jpg', ratio: 1, foco: [0.5, 0.5], grade: 'none', sizes: [360, 741] },
+  'manos-taller':     { src: 'real/fb-manos.jpg', ratio: 4 / 5, foco: [0.42, 0.5], grade: 'real', sizes: [576] },
+  'interior':         { src: 'real/maps-interior-hd.jpg', ratio: 4 / 5, foco: [0.78, 0.5], grade: 'real', sizes: [320, 640, 1000] },
+  'centro-tienda':    { src: 'real/maps-centro.jpg', ratio: 4 / 5, foco: [0.5, 0.55], grade: 'real', sizes: [320, 640] },
+  'navidad-interior': { src: 'real/ig-navidad-interior.jpg', ratio: 4 / 5, foco: [0.5, 0.5], grade: 'real', sizes: [320, 480] },
+  // Cuaderno de bodas: todas 4:5 para que la tira sea uniforme
+  'boda-acantilado':  { src: 'real/fb-acantilado-arco.jpg', ratio: 4 / 5, foco: [0.5, 0.5], grade: 'real', sizes: [576] },
+  'boda-acantilado-mesa': { src: 'real/fb-acantilado-mesa.jpg', ratio: 4 / 5, foco: [0.55, 0.5], grade: 'real', sizes: [576] },
+  'boda-acantilado-sillas': { src: 'real/fb-acantilado-sillas.jpg', ratio: 4 / 5, foco: [0.45, 0.5], grade: 'real', sizes: [576] },
+  'boda-acantilado-flor': { src: 'real/fb-acantilado-flor.jpg', ratio: 4 / 5, foco: [0.4, 0.5], grade: 'real', sizes: [576] },
+  'boda-pasillo':     { src: 'real/bodas-aisle2.png', ratio: 4 / 5, foco: [0.42, 0.5], grade: 'real', sizes: [480, 800] },
+  'boda-peonias':     { src: 'real/bodas-peonies.png', ratio: 4 / 5, foco: [0.36, 0.55], grade: 'real', sizes: [480, 800] },
+  'boda-arco-puerto': { src: 'real/bodas-archport1.png', ratio: 4 / 5, foco: [0.52, 0.5], grade: 'real', sizes: [480, 800] },
+  'boda-centro':      { src: 'real/bodas-centerpiece.png', ratio: 4 / 5, foco: [0.5, 0.5], grade: 'real', sizes: [480, 680] },
   'boda-arco-mar':    { src: 'real/bodas-archsea.png', ratio: 4 / 5, foco: [0.55, 0.5], grade: 'real', sizes: [480, 800] },
-  'boda-noche':       { src: 'real/bodas-night.png', ratio: 4 / 3, foco: [0.5, 0.5], grade: 'real', sizes: [480, 800] },
-  'boda-velas':       { src: 'real/bodas-candles.png', ratio: 4 / 3, foco: [0.5, 0.6], grade: 'real', sizes: [480, 800] },
-  'boda-playa-ig':    { src: 'real/ig-arco-playa.jpg', ratio: 9 / 16, foco: [0.5, 0.5], grade: 'real', sizes: [360] },
+  'boda-velas':       { src: 'real/bodas-candles.png', ratio: 4 / 5, foco: [0.36, 0.6], grade: 'real', sizes: [480, 680] },
   'boda-boho':        { src: 'real/maps-boho.jpg', ratio: 4 / 5, foco: [0.5, 0.5], grade: 'real', sizes: [480, 800] },
 };
 
 // Velo cálido en "soft-light": acerca la temperatura de fuentes distintas
-const VELO = { day: [244, 226, 198, 0.22], night: [255, 196, 120, 0.16], real: [242, 222, 196, 0.26] };
+const VELO = { day: [244, 226, 198, 0.22], night: [255, 196, 120, 0.16], real: [242, 222, 196, 0.26], none: [255, 255, 255, 0] };
 
 async function preparar({ src, ratio, foco: [fx, fy], grade }) {
   const base = sharp(`raw/${src}`).rotate();
@@ -54,7 +57,7 @@ async function preparar({ src, ratio, foco: [fx, fy], grade }) {
   if (grade === 'real') img = img.modulate({ saturation: 0.88 }).linear(0.94, 8); // blacks algo levantados, menos saturación de móvil
   if (grade === 'day') img = img.modulate({ saturation: 0.94 });
   if (grade === 'night') img = img.modulate({ saturation: 0.9, brightness: 0.96 });
-  const buf = await img.composite([{ input: velo, blend: 'soft-light' }]).toBuffer();
+  const buf = grade === 'none' ? await img.toBuffer() : await img.composite([{ input: velo, blend: 'soft-light' }]).toBuffer();
   return { buf, cw };
 }
 
@@ -65,7 +68,7 @@ for (const [nombre, def] of Object.entries(FOTOS)) {
   const hechos = [];
   for (const w of def.sizes) {
     if (w > cw * 1.05) continue; // nunca ampliar
-    const q = def.grade === 'real' ? 76 : 72;
+    const q = def.q || (def.grade === 'real' ? 76 : 72);
     await sharp(buf).resize({ width: w }).sharpen({ sigma: 0.5 }).webp({ quality: q, effort: 6 }).toFile(`${OUT}/${nombre}-${w}.webp`);
     hechos.push(w);
   }

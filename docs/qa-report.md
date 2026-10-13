@@ -18,7 +18,9 @@ Pruebas ejecutadas con Playwright (Chromium) contra `dist/` servido en local. Ca
 - Presupuesto de boda: mensaje con fecha, lugar, invitados e idea.
 - Enlaces: `tel:+34615641086`, `tel:+34966420964`, `mailto:borealfloristas@hotmail.es`, `wa.me/34615641086`, Google Maps (cid de la ficha real), Instagram.
 - Estado de apertura calculado en hora de Madrid; resalta el día actual en la tabla.
-- Índice de encargos: imagen que sigue al cursor (solo puntero fino), colocada bien aunque se entre por scroll.
+- Tarjeta: el tono «Personalizado» muestra un campo de colores, lo lleva a la tarjeta y al mensaje, y se oculta al elegir otro tono.
+- Hero: en 1280×720, 1440×900 y 1920×1080 el titular arranca a la altura del arco y la CTA es visible; en 390×844 y 768×1024 queda por encima de la barra fija.
+- Mapa de Google embebido (carga diferida) con el marcador de Boreal.
 - Cuaderno de bodas: desplazamiento con dedo, flechas y teclado (← →).
 
 ## Accesibilidad

@@ -104,37 +104,6 @@
   addEventListener('resize', alScroll);
   alScroll();
 
-  /* ---------- Índice de encargos: imagen que sigue al cursor ---------- */
-  const indice = $('[data-indice]');
-  const caja = $('[data-preview-box]');
-  if (indice && caja && matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
-    const label = $('[data-preview-label]', caja);
-    let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
-    const mover = () => {
-      cx += (tx - cx) * 0.18; cy += (ty - cy) * 0.18;
-      caja.style.setProperty('--x', `${cx}px`); caja.style.setProperty('--y', `${cy}px`);
-      raf = Math.abs(tx - cx) + Math.abs(ty - cy) > 0.5 ? requestAnimationFrame(mover) : 0;
-    };
-    indice.addEventListener('mousemove', (e) => {
-      tx = e.clientX + 28; ty = e.clientY - 150;
-      if (sinMovimiento) { cx = tx; cy = ty; caja.style.setProperty('--x', `${cx}px`); caja.style.setProperty('--y', `${cy}px`); }
-      else if (!raf) raf = requestAnimationFrame(mover);
-    });
-    $$('.indice__item', indice).forEach((item) => {
-      item.addEventListener('mouseenter', (e) => {
-        // Si se entra por scroll (sin mover el ratón) no habrá mousemove: colocar ya
-        tx = e.clientX + 28; ty = e.clientY - 150;
-        if (!caja.classList.contains('is-on')) { cx = tx; cy = ty; caja.style.setProperty('--x', `${cx}px`); caja.style.setProperty('--y', `${cy}px`); }
-        const n = item.dataset.preview;
-        $$('img', caja).forEach((img) => img.classList.toggle('is-on', img.dataset.previewSrc === n));
-        const real = ['interior', 'centro-tienda', 'navidad-interior'].includes(n);
-        label.textContent = `${item.querySelector('.indice__num').textContent} ${real ? '● foto real' : 'ambiente'}`;
-        caja.classList.add('is-on');
-      });
-    });
-    indice.addEventListener('mouseleave', () => caja.classList.remove('is-on'));
-  }
-
   /* ---------- Fechas legibles ---------- */
   const fechaLarga = (v) => {
     if (!v) return '';
@@ -151,12 +120,16 @@
     const wa = $('[data-enviar-wa]');
     const mail = $('[data-enviar-mail]');
     const EJEMPLO = 'Que este ramo te diga lo que yo no sé escribir.';
+    const campoPropio = $('[data-campo-propio]', form);
     const etiquetaDe = (name) => form.querySelector(`input[name="${name}"]:checked`)?.nextElementSibling.textContent.trim() || '';
 
     const pintar = () => {
       const d = Object.fromEntries(new FormData(form));
       t('ocasion').textContent = etiquetaDe('ocasion');
-      t('tonos').textContent = etiquetaDe('tonos');
+      const propio = d.tonos === 'personalizado';
+      campoPropio.hidden = !propio;
+      const tonos = propio ? (d.tonos_propios ? d.tonos_propios.trim() : 'a mi gusto (te lo explico)') : d.tonos;
+      t('tonos').textContent = propio ? (d.tonos_propios || 'Personalizado') : etiquetaDe('tonos');
       t('para').textContent = d.para ? `Para ${d.para},` : 'Para ti,';
       t('texto').textContent = d.dedicatoria || EJEMPLO;
       t('texto').style.opacity = d.dedicatoria ? 1 : 0.5;
@@ -165,7 +138,7 @@
 
       const lineas = [
         `Hola, Boreal. Quería encargar un ramo para ${d.ocasion}.`,
-        `· Tonos: ${d.tonos}`,
+        `· Tonos: ${tonos}`,
         `· Tamaño: ${d.tamano}`,
         `· Entrega: ${d.entrega}${d.fecha ? `, para el ${fechaLarga(d.fecha)}` : ''}`,
         d.para && `· Para: ${d.para}`,

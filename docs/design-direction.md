@@ -24,16 +24,19 @@ El cambio de escala (tienda → bodas) funde las imágenes con el scroll y relev
 ## Fotografía
 Día: luz de ventana, sombras duras de sol, buganvilla, papel kraft. Noche: velas, mesas largas, palmeras iluminadas. Fotos reales de Boreal con un etalonaje común (menos saturación, negros levantados, velo cálido) y siempre etiquetadas como "Trabajo real". Stock solo para atmósfera, nunca presentado como trabajo propio.
 
+## Hero: «la puerta»
+La fachada real (foto de Google Maps, original 3024×4032) recortada en arco, como la puerta enmarcada de buganvilla. En escritorio va en el centro, con «Ramos para hoy,» a la izquierda y «bodas para siempre.» a la derecha, en diagonal. En móvil es un cartel a pantalla completa con el titular sobre la foto. Sustituye al hero anterior (texto a la izquierda e imagen de stock a la derecha), que se descartó porque parecía una plantilla.
+
 ## Elementos distintivos
 1. **Arco** como recorte de las imágenes clave (eco de la puerta de flores).
 2. **Etiquetas de herbario** en mono bajo las imágenes: Nº, nombre botánico, procedencia.
-3. **Índice numerado** de encargos con imagen que aparece al pasar (escritorio) o miniatura (móvil).
+3. **Índice numerado** de encargos con la foto al lado de cada línea (también en escritorio, sin imágenes flotantes).
 4. **Tarjeta dedicatoria**: el visitante escribe la dedicatoria, elige ocasión y tonos, y la envía a la tienda por WhatsApp o email. Honesto: no hay backend; abre la app del usuario con el mensaje.
 5. **Cambio de escala** al llegar a bodas: de un ramo a la boda entera, con la etiqueta «Tienda → Bodas y eventos».
 6. **Estado de apertura en vivo** calculado con el horario publicado.
 
 ## Interacción y movimiento
-Revelados suaves por opacidad/desplazamiento corto; imagen del índice que sigue al cursor (solo puntero fino); fundido de imágenes y relevo de frase en el cambio de escala. Todo desactivado con `prefers-reduced-motion`.
+Revelados suaves por opacidad/desplazamiento corto; fundido de imágenes y relevo de frase en el cambio de escala. Todo desactivado con `prefers-reduced-motion`.
 
 ## Botones
 Rectángulo sólido de esquinas apenas redondeadas (2 px) con flecha; enlaces secundarios subrayados. En móvil, barra fija inferior: Llamar · WhatsApp · Cómo llegar.

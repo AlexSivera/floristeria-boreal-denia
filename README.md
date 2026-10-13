@@ -17,4 +17,5 @@ Se publica en GitHub Pages desde la rama `gh-pages` con `npm run deploy` (build 
 
 ## Pendiente de confirmar con el cliente
 - Zona y condiciones del envío a domicilio.
-- Permiso para usar las fotos de Bodas.net / Instagram y las reseñas citadas.
+- Permiso para usar las fotos de Bodas.net, Instagram y Facebook y las reseñas citadas.
+- Una foto de José Antonio para la sección «La tienda».
